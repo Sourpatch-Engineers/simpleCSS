@@ -1,22 +1,24 @@
 <link rel="stylesheet" href='spikeStyleSheet.css'>
+<script src='index.js'></script>
+
 <head>
     <title>ScrumStars.com</title>
 </head>
 
 <body>
 
-<div class="div-view">
-    <ul class="ul-nav">
-        <li class="li-nav"><a   class="li-a-nav" >Home</a></li>
-        <li class="li-nav"><a class="li-a-nav" >About</a></li>
-        <li class="li-nav"><a class="li-a-nav" >Proposal</a></li>
-        <li class="li-nav"><a class="li-a-nav" href="https://salmon-rock-00b96d910.azurestaticapps.net/" target="_blank">The Team</a></li>
-        <li class='li-nav' id = 'title'><a class='li-a-nav'>ScrumStars</a></li>
-    </ul>
-</div>
+    <div class="div-view">
+        <ul class="ul-nav">
+            <li class="li-nav"><a class="li-a-nav" href="/" ><img class="logo" src="carlSr.png" alt="Logo"></a></li>
+            <li class="li-nav"><a class="li-a-nav" href="/">Home</a></li>
+            <li class="li-nav"><a class="li-a-nav" href="/about">About</a></li>
+            <li class="li-nav"><a class="li-a-nav" href="/proposal">Proposal</a></li>
+            <li class="li-nav"><a class="li-a-nav" href="https://salmon-rock-00b96d910.azurestaticapps.net/" target="_blank">The Team</a></li>
+        </ul>
+    </div>
 
 <div class='center'>
-    <button type="button" id="butt">Create Team</button>
+    <button type="button" id="butt" class = 'center'>Create Team</button>
 </div>
 
 <div class ='center'>
@@ -58,4 +60,10 @@
     </table>
 </div>
 
+<div class = 'entryfield'>
+    <input type = 'text' id = 'textbox' class = 'center' value = 'enter text here'>
+</div>
+
+<div id = 'submit'></div>
+    <button type='submit' id = 'butt' class = 'center' onclick = 'ButtClick()'>Submit</button>
 </body>
