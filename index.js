@@ -15,11 +15,13 @@ function ButtClick(){
     if (text == "" && prevErrorText == "") {
         try{
             document.querySelector('#textbox').id = 'textboxerror';
-            document.querySelector('#textboxerror').value = 'uh oh';
+            document.querySelector('#textboxerror').value = '';
+            document.querySelector('#textboxerror').placeholder = 'uh oh';
         }
         catch
         {
-            document.querySelector('#textboxerror').value = 'uh oh';
+            document.querySelector('#textboxerror').value = '';
+            document.querySelector('#textboxerror').placeholder = 'uh oh';
         }
         
     }
@@ -34,4 +36,10 @@ function ButtClick(){
         }
     }
     
+}
+
+function AddMember(event){
+    if (event.keyCode == 13) {
+        document.querySelector('#textbox').value='enter was pressed';
+    }
 }
