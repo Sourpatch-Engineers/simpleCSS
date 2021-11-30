@@ -1,38 +1,18 @@
 function ButtClick(){
-    try{
-        text = document.querySelector('#textbox').value;
-    }
-    catch{
-        text = "";
-    }
-    try{
-        prevErrorText = document.querySelector('#textboxerror').value;
-    }
-    catch{
-        prevErrorText = "";
-    }
-
-    if (text == "" && prevErrorText == "") {
-        try{
-            document.querySelector('#textbox').id = 'textboxerror';
-            document.querySelector('#textboxerror').value = '';
-            document.querySelector('#textboxerror').placeholder = 'uh oh';
-        }
-        catch
+    textList = document.querySelectorAll('.textbox');
+    
+    for (let i = 0; i < textList.length; i++) {
+        if (textList[i].value == "")
         {
-            document.querySelector('#textboxerror').value = '';
-            document.querySelector('#textboxerror').placeholder = 'uh oh';
+            textList[i].id = 'textboxerror';
+            textList[i].placeholder = 'cant enter empty field';
+            textList[i].value = '';
         }
-        
-    }
 
-    else {
-        try{
-            document.querySelector('#textboxerror').id = 'textbox';
-        }
-        catch
+        else if (textList[i].id == 'textboxerror')
         {
-            x = 0;
+            textList[i].id = 'textbox';
+            textList[i].placeholder = 'enter text here'; 
         }
     }
     
@@ -43,6 +23,7 @@ function AddMember(event){
         var input = document.createElement("input");
         input.setAttribute('id', 'textbox');
         input.setAttribute('type', 'text');
+        input.setAttribute('class', 'center textbox');
         input.setAttribute('onkeyup', 'AddMember(event)');
         var parent = document.querySelector(".entryfield");
         parent.appendChild(input);
